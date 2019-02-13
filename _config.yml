@@ -1,46 +1,37 @@
-# Site
-name: 'Pintereso'
-description: 'Pintereso is a free Jekyll theme for awesome people like you, Pinterest like.'
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
-baseurl: '/template-pintereso-bootstrap-jekyll'
-avatar: 'assets/images/sal.jpg'
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
 
-include: ["_pages"]
-permalink: /:title/
+exclude:
+  - "/vendor/"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "LICENSE.md"
+  - "*.gemspec"
 
-# Plugins
-plugins: 
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-seo-tag
- 
-# Defaults
-defaults:
+keep_files:
+  - "CNAME"
+  - ".git"
+  - ".gitignore"
 
-  # all posts
-  - scope:
-      path: "_posts"
-    values:
-      layout: post
-      
-  # all pages
-  - scope:
-      path: "_pages"
-    values:
-      layout: page
-      
-      
-# Syntax
+
+# Site settings
+title: Airspace
+subtitle: "A free HTML5 agency template"
+url: "https://comh.cf/" # the base hostname & protocol for your site
+# baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
+baseurl: "/airspace-jekyll"
+cover: "/assets/cover.png"
+logo: "/assets/logo.png"
+
+# Build settings
 markdown: kramdown
-highlighter: rouge
 
-# Pagination
-paginate: 20
+# Google analytics
+# ga_tracking_id: "UA-XXXX-1"
 
+# Category descriptions (for archive pages)
+descriptions:
+  - cat: jekyll
+    desc: "Posts describing Jekyll setup techniques."
 
-# Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+  - cat: dummy
+    desc: "Just some placeholder posts, lorem ipsum and the rest."
